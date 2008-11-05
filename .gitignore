@@ -6,3 +6,5 @@ doc/api
 doc/app
 public/uploads
 public/uploads/*
+db/*.sqlite3
+db/schema.rb
