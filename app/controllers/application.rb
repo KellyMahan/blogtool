@@ -12,4 +12,14 @@ class ApplicationController < ActionController::Base
   # Uncomment this to filter the contents of submitted sensitive data parameters
   # from your application log (in this case, all fields with names like "password"). 
   # filter_parameter_logging :password
+  
+  private
+  
+  def is_admin
+    unless session[:user] ? session[:user].admin : false
+      session[:last_page] = request.url
+      redirect_to "/login"
+    end
+  end
+  
 end

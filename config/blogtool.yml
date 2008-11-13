@@ -1,0 +1,8 @@
+template: minimal
+allowed_template_extensions:
+  - jpg
+  - png
+  - js
+  - gif
+  - css
+  - pdf

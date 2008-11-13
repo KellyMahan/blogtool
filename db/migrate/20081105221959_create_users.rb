@@ -4,9 +4,9 @@ class CreateUsers < ActiveRecord::Migration
       t.string :username
       t.string :email
       t.string :password
-      t.boolean :blocked
+      t.boolean :is_blocked
       t.boolean :approved
-      t.boolean :admin
+      t.boolean :is_admin
 
       t.timestamps
     end

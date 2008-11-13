@@ -1,6 +1,8 @@
 class UsersController < ApplicationController
   # GET /users
   # GET /users.xml
+  before_filter :is_admin
+  
   def index
     @users = User.find(:all)
 
