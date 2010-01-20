@@ -1,0 +1,15 @@
+%h3 It looks like you are creating a fresh install of blogtool.
+%p
+  Please enter your admin nickname, email, and password.
+.admin_form
+  -form_for :user, "/setup/step1" do |f|
+    .label=f.label :nickname
+    .input=f.text_field :nickname
+    .label=f.label :email
+    .input=f.text_field :email
+    .label=f.label :password
+    .input=f.password_field :password
+    .label=f.label :confirm_password
+    .input=f.password_field :confirm_password
+    .submit=f.submit :continue
+    
